@@ -16,7 +16,7 @@ def result():
     return render_template('result.html')
 
 @app.route('/loading')
-def result():
+def loading():
     return render_template('loading.html')
 
 @app.route('/', methods=['POST'])
