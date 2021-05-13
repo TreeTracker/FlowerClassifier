@@ -1,10 +1,18 @@
 <!doctype html>
 <html>
   <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>FlowerClassifier- Upload</title>
+    <style
     <style>
       body {
         background: #212121;
+        text-align: center;
       }
       .content {
         max-width: 500px;
@@ -12,15 +20,70 @@
         background: #4CAF50;
         padding: 10px;
       }
+      .name{
+        color: aliceblue;
+        padding: 20px;
+      }
+      input[type=file] {
+      background-color: palevioletred;
+      color: black;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+      input[type=file]:hover {
+          background-color: #414141;
+          color: wheat;
+      }
+      button {
+      background-color: #414141;
+      color: wheat;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+      button:hover {
+          background-color: palevioletred;
+          color: black;
+      }
+
     </style>
+    <script>
+      function onScreenLoad(){
+        document.getElementById("content").style.display = "block";
+        document.getElementById("loading").style.display = "none";
+      }
+      function showLoading(){
+        document.getElementById("loading").style.display = "block";
+        // document.getElementById("content").style.display = "";
+      }
+      window.onload = onScreenLoad;
+    </script>
   </head>
   <body>
+    <div class="name">
+      <h1> FlowerClassifier </h1>
+    </div>
     <div class="content">
-      <h1>File Upload</h1>
-      <form method="POST" action="" enctype="multipart/form-data">
-        <p><input type="file" name="file" required></p>
-        <p><input type="submit" value="Submit"></p>
-      </form>
-  </div>
+      <div id="content">
+        <h1>File Upload</h1><br>
+        <form method="POST" action="" enctype="multipart/form-data">
+          <p><input type="file" name="file" required></p> <br>
+          <center>
+            <p><button type="submit" value="Submit"  onclick=showLoading()>Submit</button></button></p>
+          </center>
+        </form>
+        <div id="loading">
+          <center>
+            <div class="spinner-border text-danger"></div>
+            <br>
+            <h1>Loading....</h1>  
+        </center>  
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
