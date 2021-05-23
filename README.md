@@ -1,20 +1,35 @@
 # FlowerClassifier 
 
 <img src='./README/flower.gif' height=200 width=200>
-<br>
-This is a web-based Project that will take user input as an Image. The user has to upload his image on the flask-based site. The image will then go TensorFlow code previously trained and will give the output as classified between different types of Flowers.
 
-## Training the Model
+## How to Use
 
-The Tensorflow model will be trained using TeachableMachine and be fed predefined data of images of different types of flowers.
+Follow the Steps given below:
 
-## The Website
+```
+git clone https://github.com/TreeTracker/FlowerClassifier
+cd FlowerClassifier
+pip install -r requirements.txt
+python main.py
+```
 
-The Website Will have a Flask backend for taking user input and giving out output.
+## About
 
+This is a Classifier which classifies any image into 5 classes of flowers
+- Daisy 
+- Dandelion 
+- Rose 
+- Sunflower 
+- Tulip
 
-# Technologies Used
+## Technologies Used
 
 - TensorFlow
 - Python 
 - Flask
+
+## Screenshots
+
+<img src='./README/1.PNG'>
+<img src='./README/2.PNG'>
+<img src='./README/3.PNG'>
