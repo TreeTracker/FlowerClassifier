@@ -22,7 +22,7 @@ def classification(fileName):
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
     image = Image.open(fileName)
-
+    image.show()
     size = (224, 224)
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
     image_array = np.asarray(image)
@@ -65,11 +65,11 @@ def classification(fileName):
         else:
             Tulip += strPrediction[x]
 
-    finalPrediction["Daisy"] = str(round(float(Daisy.strip()),5) * 100 ) + "%"
-    finalPrediction["Dandelion"] = str(round(float(Dandelion.strip()),5) * 100) + "%"
-    finalPrediction["Rose"] = str(round(float(Rose.strip()),5) * 100) + "%"
-    finalPrediction["Sunflower"] = str(round(float(Sunflower.strip()),5) * 100) + "%"
-    finalPrediction["Tulip"] = str(round(float(Tulip.strip()),5) * 100) + "%"
+    finalPrediction["Daisy"] = str(round(float(Daisy.strip()),2) * 100 ) + "%"
+    finalPrediction["Dandelion"] = str(round(float(Dandelion.strip()),2) * 100) + "%"
+    finalPrediction["Rose"] = str(round(float(Rose.strip()),2) * 100) + "%"
+    finalPrediction["Sunflower"] = str(round(float(Sunflower.strip()),2) * 100) + "%"
+    finalPrediction["Tulip"] = str(round(float(Tulip.strip()),2) * 100) + "%"
 
     print(finalPrediction)
     return finalPrediction
