@@ -1,4 +1,4 @@
 flask
-tensorflow
+tensorflow-cpu
 numpy
 Pillow
